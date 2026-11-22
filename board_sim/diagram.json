@@ -1,0 +1,642 @@
+{
+  "version": 1,
+  "author": "presbyte and chatgpt (mostly chatgpt lol)",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": -38.4,
+      "left": -235.16,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip1",
+      "top": -67.7,
+      "left": -115.2,
+      "attrs": {
+        "pixels": "52",
+        "pixelSize": "2020"
+      }
+    },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip2",
+      "top": -19.7,
+      "left": -38.4,
+      "attrs": {
+        "pixels": "52",
+        "pixelSize": "2020"
+      }
+    },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip3",
+      "top": 18.7,
+      "left": -28.8,
+      "attrs": {
+        "pixels": "52",
+        "pixelSize": "2020"
+      }
+    },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip4",
+      "top": 96,
+      "left": -57.6,
+      "attrs": {
+        "pixels": "52",
+        "pixelSize": "2020"
+      }
+    },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip5",
+      "top": 144,
+      "left": -76.8,
+      "attrs": {
+        "pixels": "52",
+        "pixelSize": "2020"
+      }
+    },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip6",
+      "top": 201.6,
+      "left": -76.8,
+      "attrs": {
+        "pixels": "52",
+        "pixelSize": "2020"
+      }
+    },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip7",
+      "top": 249.6,
+      "left": -96,
+      "attrs": {
+        "pixels": "52",
+        "pixelSize": "2020"
+      }
+    },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip8",
+      "top": 364.3,
+      "left": -38.4,
+      "attrs": {
+        "pixels": "52",
+        "pixelSize": "2020"
+      }
+    },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip9",
+      "top": 422.4,
+      "left": -76.8,
+      "attrs": {
+        "pixels": "52",
+        "pixelSize": "2020"
+      }
+    },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip10",
+      "top": 451.2,
+      "left": 48,
+      "attrs": {
+        "pixels": "52",
+        "pixelSize": "2020"
+      }
+    },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip11",
+      "top": 489.1,
+      "left": -57.6,
+      "attrs": {
+        "pixels": "52",
+        "pixelSize": "2020"
+      }
+    },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip12",
+      "top": 527.5,
+      "left": -57.6,
+      "attrs": {
+        "pixels": "52",
+        "pixelSize": "2020"
+      }
+    },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip13",
+      "top": 575.5,
+      "left": -76.8,
+      "attrs": {
+        "pixels": "52",
+        "pixelSize": "2020"
+      }
+    },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip14",
+      "top": 613.9,
+      "left": -57.6,
+      "attrs": {
+        "pixels": "52",
+        "pixelSize": "2020"
+      }
+    },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip15",
+      "top": 661.9,
+      "left": -76.8,
+      "attrs": {
+        "pixels": "52",
+        "pixelSize": "2020"
+      }
+    },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip16",
+      "top": 729.1,
+      "left": -57.6,
+      "attrs": {
+        "pixels": "52",
+        "pixelSize": "2020"
+      }
+    },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip17",
+      "top": 777.1,
+      "left": -76.8,
+      "attrs": {
+        "pixels": "52",
+        "pixelSize": "2020"
+      }
+    },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip18",
+      "top": 824.6,
+      "left": -86.4,
+      "attrs": {
+        "pixels": "52",
+        "pixelSize": "2020"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:TX",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "strip1:VDD",
+      "esp:5V",
+      "red",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip1:VSS",
+      "esp:GND.1",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip1:VDD.2",
+      "strip2:VDD.2",
+      "red",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "strip1:VSS.2",
+      "strip2:VSS.2",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip2:VDD",
+      "strip3:VDD",
+      "red",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip2:VSS",
+      "strip3:VSS",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip3:VDD.2",
+      "strip4:VDD.2",
+      "red",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "strip3:VSS.2",
+      "strip4:VSS.2",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip4:VDD",
+      "strip5:VDD",
+      "red",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip4:VSS",
+      "strip5:VSS",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip5:VDD.2",
+      "strip6:VDD.2",
+      "red",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "strip5:VSS.2",
+      "strip6:VSS.2",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip6:VDD",
+      "strip7:VDD",
+      "red",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip6:VSS",
+      "strip7:VSS",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip7:VDD.2",
+      "strip8:VDD.2",
+      "red",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "strip7:VSS.2",
+      "strip8:VSS.2",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip8:VDD",
+      "strip9:VDD",
+      "red",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip8:VSS",
+      "strip9:VSS",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip9:VDD.2",
+      "strip10:VDD.2",
+      "red",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "strip9:VSS.2",
+      "strip10:VSS.2",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip10:VDD",
+      "strip11:VDD",
+      "red",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip10:VSS",
+      "strip11:VSS",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip11:VDD.2",
+      "strip12:VDD.2",
+      "red",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "strip11:VSS.2",
+      "strip12:VSS.2",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip12:VDD",
+      "strip13:VDD",
+      "red",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip12:VSS",
+      "strip13:VSS",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip13:VDD.2",
+      "strip14:VDD.2",
+      "red",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "strip13:VSS.2",
+      "strip14:VSS.2",
+      "black",
+      [
+        "h24.8",
+        "v37.6"
+      ]
+    ],
+    [
+      "strip14:VDD",
+      "strip15:VDD",
+      "red",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip14:VSS",
+      "strip15:VSS",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip15:VDD.2",
+      "strip16:VDD.2",
+      "red",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "strip15:VSS.2",
+      "strip16:VSS.2",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip16:VDD",
+      "strip17:VDD",
+      "red",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip16:VSS",
+      "strip17:VSS",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip17:VDD.2",
+      "strip18:VDD.2",
+      "red",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "strip17:VSS.2",
+      "strip18:VSS.2",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "esp:2",
+      "strip1:DIN",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip1:DOUT",
+      "strip2:DIN",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip2:DOUT",
+      "strip3:DIN",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip3:DOUT",
+      "strip4:DIN",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip4:DOUT",
+      "strip5:DIN",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip5:DOUT",
+      "strip6:DIN",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip6:DOUT",
+      "strip7:DIN",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip7:DOUT",
+      "strip8:DIN",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip8:DOUT",
+      "strip9:DIN",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip9:DOUT",
+      "strip10:DIN",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip10:DOUT",
+      "strip11:DIN",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip11:DOUT",
+      "strip12:DIN",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip12:DOUT",
+      "strip13:DIN",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip13:DOUT",
+      "strip14:DIN",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip14:DOUT",
+      "strip15:DIN",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip15:DOUT",
+      "strip16:DIN",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip16:DOUT",
+      "strip17:DIN",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "strip17:DOUT",
+      "strip18:DIN",
+      "green",
+      [
+        "h0"
+      ]
+    ]
+  ],
+  "dependencies": {}
+}
